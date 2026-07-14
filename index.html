@@ -10,32 +10,45 @@
   <main class="page">
     <section class="card" aria-label="Verifizierungsdaten">
       <header class="card-header">
-        <img src="logo.png" alt="Unternehmenslogo" class="brand-logo" />
+        <img src="logo1.jpg" alt="Unternehmenslogo" class="brand-logo" />
         <div class="header-text">
-          <p class="eyebrow">Verifizierung</p>
-          <h1>Mitarbeiterdaten</h1>
+          <p class="eyebrow">Deutsche Telekom - Identitätsprüfung</p>
+          <h1>Mitarbeiter-Verifizierung</h1>
         </div>
+        <span class="live-badge" aria-label="Prüfstatus">Aktiv</span>
       </header>
 
       <div class="profile">
-        <img src="matthias.jpg" alt="Foto von Matthias Zimmermann" class="avatar" />
+        <div class="avatar-frame" aria-hidden="true">
+          <img src="MZ2.jpg" alt="Foto von Matthias Zimmermann" class="avatar" />
+        </div>
         <div class="profile-info">
-          <p class="status ok">● Verifizierung aktiv (Demo)</p>
+          <p class="status ok">● Identität bestätigt</p>
           <h2 id="name">Matthias Zimmermann</h2>
-          <p id="role">Autorisierter Kundenberater</p>
+          <p id="role">Technischer Aussendienst / IT</p>
+          <p class="meta">Zuletzt geprüft: <span id="lastCheck">-</span></p>
         </div>
       </div>
 
       <dl class="details">
         <div><dt>Ausweis-ID</dt><dd id="badgeId">MZ204</dd></div>
         <div><dt>Gültig bis</dt><dd id="validUntil">09/2026</dd></div>
-        <div><dt>Einsatzgebiet</dt><dd id="region">NRW / Raum Dortmund</dd></div>
-        <div><dt>Partnerfirma</dt><dd id="partner">Ranger Marketing & Vertriebs GmbH</dd></div>
-        <div><dt>Auftrag</dt><dd id="auftrag">Im Auftrag der Telekom (Demo)</dd></div>
+        <div><dt>Zuständigkeitsbereich</dt><dd id="region">Raum Quickborn (Schleswig-Holstein)</dd></div>
+        <div><dt>Arbeitgeber</dt><dd id="partner">Deutsche Telekom Privatkunden-Vertrieb GmbH</dd></div>
+        <div><dt>Beschäftigungsstatus</dt><dd id="employment">Direktanstellung Deutsche Telekom (kein Vertriebspartner)</dd></div>
+        <div><dt>Autorisierung</dt><dd id="authorization">Aussendienst, Funkstandorte und IT-Bereich</dd></div>
       </dl>
 
+      <section class="qr-note" aria-label="QR-Hinweis">
+        <h3>QR-Verwendung</h3>
+        <p>
+          Diese URL wird als QR-Code auf dem Mitarbeiterausweis hinterlegt. Beim Scannen
+          werden die hier angezeigten Verifizierungsdaten geladen.
+        </p>
+      </section>
+
       <p class="notice">
-        Diese Seite dient als technische Demonstration einer QR-gestützten Mitarbeiteranzeige.
+        Hinweis: Diese Verifizierung ist nur in Verbindung mit einem gültigen Lichtbildausweis der genannten Person gültig.
       </p>
 
       <div class="actions">

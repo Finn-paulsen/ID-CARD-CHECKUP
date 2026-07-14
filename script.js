@@ -18,6 +18,16 @@ const employees = {
     partner: "Deutsche Telekom Privatkunden-Vertrieb GmbH",
     employment: "Direktanstellung Deutsche Telekom (kein Vertriebspartner)",
     authorization: "Aussendienst, Funkstandorte und IT-Bereich"
+  },
+  FP314: {
+    name: "Finn Paulsen",
+    role: "Technischer Mitarbeiter im Aussendienst",
+    badgeId: "FP314",
+    validUntil: "12/2026",
+    region: "Funkstandorte im Raum Quickborn",
+    partner: "Stadtwerke Quickborn",
+    employment: "Auszubildender im technischen Aussendienst",
+    authorization: "Autorisiert fuer Messwertaufnahmen und softwaretechnische Taetigkeiten im Auftrag der Deutsche Telekom Technik GmbH"
   }
 };
 
@@ -36,8 +46,9 @@ function applyData(data) {
   document.getElementById("authorization").textContent = data.authorization;
 }
 
-const id = (getParam("id") || "MZ204").toUpperCase();
-applyData(employees[id] || employees.MZ204);
+const defaultId = (document.body.dataset.employeeId || "MZ204").toUpperCase();
+const id = (getParam("id") || defaultId).toUpperCase();
+applyData(employees[id] || employees[defaultId] || employees.MZ204);
 
 const checkStamp = new Date().toLocaleString("de-DE", {
   day: "2-digit",

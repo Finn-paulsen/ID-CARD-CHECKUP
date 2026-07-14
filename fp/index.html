@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mitarbeiter-Verifizierung</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-employee-id="FP314">
+  <main class="page">
+    <section class="card" aria-label="Verifizierungsdaten">
+      <header class="card-header">
+        <img src="logo1.jpg" alt="Unternehmenslogo" class="brand-logo" />
+        <div class="header-text">
+          <p class="eyebrow">Deutsche Telekom - Identitätsprüfung</p>
+          <h1>Mitarbeiter-Verifizierung</h1>
+        </div>
+        <span class="live-badge" aria-label="Prüfstatus">Aktiv</span>
+      </header>
+
+      <div class="profile">
+        <div class="avatar-frame" aria-hidden="true">
+          <img src="FP-Logo.jpg" alt="Foto von Finn Paulsen" class="avatar" />
+        </div>
+        <div class="profile-info">
+          <p class="status ok">● Identität bestätigt</p>
+          <h2 id="name">Finn Paulsen</h2>
+          <p id="role">Technischer Mitarbeiter im Aussendienst</p>
+          <p class="meta">Zuletzt geprüft: <span id="lastCheck">-</span></p>
+        </div>
+      </div>
+
+      <dl class="details">
+        <div><dt>Ausweis-ID</dt><dd id="badgeId">FP314</dd></div>
+        <div><dt>Gültig bis</dt><dd id="validUntil">12/2026</dd></div>
+        <div><dt>Zuständigkeitsbereich</dt><dd id="region">Funkstandorte im Raum Quickborn</dd></div>
+        <div><dt>Arbeitgeber</dt><dd id="partner">Stadtwerke Quickborn</dd></div>
+        <div><dt>Beschäftigungsstatus</dt><dd id="employment">Auszubildender im technischen Aussendienst</dd></div>
+        <div><dt>Autorisierung</dt><dd id="authorization">Messwertaufnahmen und softwaretechnische Tätigkeiten im Auftrag der Deutsche Telekom Technik GmbH</dd></div>
+      </dl>
+
+      <section class="qr-note" aria-label="QR-Hinweis">
+        <h3>QR-Verwendung</h3>
+        <p>
+          Diese URL wird als QR-Code auf dem Mitarbeiterausweis hinterlegt. Beim Scannen
+          werden die hier angezeigten Verifizierungsdaten geladen.
+        </p>
+      </section>
+
+      <p class="notice">
+        Hinweis: Diese Verifizierung ist nur in Verbindung mit einem gültigen Lichtbildausweis der genannten Person gültig.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="tel:+498001234567">Hotline anrufen</a>
+        <button class="btn ghost" id="copyLinkBtn" type="button">Link kopieren</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
